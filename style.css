@@ -92,6 +92,7 @@ header {
 #item4 {
     position: relative;
     background: linear-gradient(to right, rgb(65,74,155) 0%,rgb(48,58,149) 50%,rgb(33,41,119) 100%);
+    border: 0px;
 }
 #item4 a {
     font-family: NotoB;
