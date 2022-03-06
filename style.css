@@ -771,6 +771,59 @@ footer {
 /* ▲　フッター */
 
 
+@media screen and (max-width:1285px) {
+    header {
+        height: 70px;
+    }
+    .header-box {
+        padding: 0 40px;
+    } 
+}
+@media screen and (max-width:1145px) {
+    /* ▼　ヘッダー */
+header {
+    height: 70px;
+}
+.header-box {
+    padding: 0 28px;
+}
+.header-box h1 {
+    font-size: 27px;
+    line-height: 70px;
+}
+.global-nav-list {
+    padding-top: calc((70px - 35px) / 2);
+}
+.global-list {
+    height: 35px;
+    width: 117px;
+}
+.global-list a {
+    font-size: 14px;
+    line-height: 35px;
+}
+#item1, #item2, #item3 {
+    margin-right: 16px;
+}
+#item4 i {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    text-align: center;
+    font-size: 1.6rem;
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+}
+.global-list a:visited {
+    color: #000;
+}
+.hamburger {
+    display: none;
+}
+/* ▲　ヘッダー */
+}
+
+
 @media screen and (max-width:767px) {
     /* ▼　ヘッダー */
     header {
