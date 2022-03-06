@@ -1,0 +1,1260 @@
+@charset "UTF-8";
+@font-face {
+    font-family: NotoR;
+    src: url(fonts/NotoSansJP-Regular.otf);
+}
+@font-face {
+    font-family: NotoB;
+    src: url(fonts/NotoSansJP-Bold.otf);
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+html {
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: NotoR;
+    color: rgb(31, 39, 116);
+    overflow-x: hidden;
+}
+body {
+    -webkit-text-size-adjust: 100%;
+    margin: 0 auto;
+}
+body, p, img, ul, h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+}
+img {
+    vertical-align: bottom;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    display: block;
+}
+
+/* ▼　ヘッダー */
+header {
+    height: 80px;
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+    background-color: rgb(246,242,212);
+}
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255,255,255, .7);
+    z-index: 999;
+}
+.header-box {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 0 110px;
+}
+.header-box h1 {
+    font-size: 4.5rem;
+    line-height: 80px;
+}
+.global-nav-list {
+    display: flex;
+    padding-top: calc((80px - 45px) / 2);
+}
+.global-list {
+    height: 45px;
+    width: 165px;
+    text-align: center;
+    border: 1px solid rgb(96, 96, 96);
+    background-color: #fff;
+}
+.global-list a {
+    display: block;
+    height: 100%;
+    font-size: 1.8rem;
+    line-height: 4.5rem;
+}
+#item1, #item2, #item3 {
+    margin-right: 30px;
+}
+#item1, #item2, #item3 a {
+    color: #000;
+}
+#item4 {
+    position: relative;
+    background: linear-gradient(to right, rgb(65,74,155) 0%,rgb(48,58,149) 50%,rgb(33,41,119) 100%);
+}
+#item4 a {
+    font-family: NotoB;
+    color: #fff;
+}
+#item4 i {
+    position: absolute;
+    right: 3.3rem;
+    top: 1.4rem;
+    text-align: center;
+    font-size: 2.0rem;
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+}
+.global-list a:visited {
+    color: #000;
+}
+.hamburger {
+    display: none;
+}
+/* ▲　ヘッダー */
+
+
+/* ▼　メイン画面 */
+#main {
+    max-width: 1366px;
+    width: 100%;
+    margin: 0 auto;
+}
+.main-top h2 br, .main04 h3 br, .accordion-container br {
+    display: none;
+}
+/* ▼　「ネットショッピング時代のスタンダード」画面 */
+.main-top {
+    position: relative;
+    background: linear-gradient(to bottom, rgb(246,242,211) 0%,rgb(247,240,191) 50%,rgb(238,231,178) 100%);
+    padding: 0 15px;
+    margin-bottom: 230px;
+}
+#main h2 {
+    padding-top: 110px;
+    padding-bottom: 60px;
+    font-size: 3.6rem;
+    line-height: 3.6rem;
+    text-align: center;
+}
+.credit-card {
+    margin: 0 auto;
+    padding-bottom: 190px;
+    max-width: 460px;
+}
+.credit-card img {
+    width: 100%;
+}
+.enter-btn-sp {
+    display: none;
+}
+.credit-card-absolute {
+    position: absolute;
+    padding: 0 15px;
+    left: 50% ;
+    bottom: 0;
+    width: calc(100% - 30px);
+    max-width: 950px;
+    transform: translate(-50%, 50%);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 10px 10px 10px 0 rgba(96, 96, 96, .3);
+}
+.credit-card-absolute p {
+    font-size: 2.4rem;
+    line-height: 6.0rem;
+    text-align: center;
+}
+.credit-card-absolute p br {
+    display: none;
+}
+/* ▲　「ネットショッピング時代のスタンダード」画面 */
+
+
+.main {
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+}
+.main h3 {
+    text-align: center;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+    font-family: NotoB;
+}
+/* ▼　「新規ご入会＆ご利用で！」 */
+.main01 {
+    position: relative;
+    padding-top: 35px;
+    padding-bottom: 30px;
+    background-color: rgb(181, 233, 238);
+    z-index: 200;
+}
+.main01::before {  /* 平行四辺形の背景 */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    transform: skewY(4deg);
+    transform-origin: top right;
+    background-color: rgb(181, 233, 238);
+    z-index: -50;
+}
+.main01::after {  /* 平行四辺形の背景 */
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    transform: skewY(-4deg);
+    transform-origin: bottom right;
+    background-color: rgb(181, 233, 238);
+    z-index: -50;
+}
+.main01-text-box{
+    max-width: 755px;
+    margin: 58px auto 0 auto;
+    padding: 0 15px 57px;
+    background-color: #fff;
+    box-shadow: 10px 10px 10px 0 rgba(96, 96, 96, .3);
+}
+.main01-text-box-top {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 22px 0 18px 0;
+    width: 100%;
+    margin: 0 auto;
+}
+.main01-text-box-top, .campaign-box, .annotation-box {
+    max-width: 557px;
+    margin: 0 auto;
+}
+.saidai {
+    font-size: 5.2rem;
+    line-height: 5.2rem;
+    writing-mode: vertical-lr;
+}
+.point-number {
+    font-size: 12rem;
+    line-height: 12rem;
+    font-family: NotoB;
+    color: rgb(127, 16, 25);
+}
+.point-text {
+    position: relative;
+    font-size: 5.2rem;
+    line-height: 5.2rem;
+}
+.point-text::after {
+    content: "※";
+    position: absolute;
+    top: -27px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    font-size: 1.6rem;
+    color: rgb(31, 39, 116);
+    font-family: NotoR;
+}
+.present-text {
+    text-align: center;
+    font-size: 5.2rem;
+    line-height: 5.2rem;
+    font-family: NotoB;
+}
+.campaign-box {
+    position: relative;
+    display: flex;
+    margin-top: 37px;
+    margin-bottom: 29px;
+    font-size: 1.6rem;
+    line-height: 35px;
+    border: 1px solid #000;
+    z-index: 310;
+}
+.campaign-box p:nth-child(1) {
+    position: relative;
+    padding-left: 20px;
+    padding-right: 15px;
+    background-color: rgb(246,243,220);
+}
+.campaign-box p:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -25.5px;
+    width: 25px;
+    height: 25px;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    background-color: rgb(246,243,220);
+    transform: rotate(45deg);
+    transform-origin: top left;
+    z-index: -1;
+}
+.campaign-box p:nth-child(2) {
+    padding-left: 55px;
+    color: #000;
+}
+.annotation-box {
+    font-size: 1.6rem;
+    line-height: 2.0rem;
+    color: #000;
+}
+.annotation {
+    display: flex;
+    margin-bottom: 33px;
+}
+.annotation p:nth-child(1) {
+    margin-right: 1.1rem;
+}
+.annotation p:nth-child(2), .annotation-list01 p:nth-child(2), .annotation-list02 p:nth-child(2) {
+    margin-right: 1.5rem;
+}
+.annotation-list01, .annotation-list02 {
+    display: flex;
+}
+.main01 .annotation-list01 {
+    margin-top: 30px;
+}
+.annotation-list01 p:nth-child(1), .annotation-list02 p:nth-child(1) {
+    margin-right: 1.2rem;
+}
+.subscription-btn {
+    max-width: 557px;
+    height: 6.5rem;
+    margin: 60px auto 0 auto;
+    text-align: center;
+    background: linear-gradient(to right, rgb(65,74,155) 0%,rgb(48,58,149) 50%,rgb(33,41,119) 100%);
+    border-radius: 65px;
+    box-shadow: 10px 10px 10px 0 rgba(96, 96, 96, .3);
+    font-size: 3.5rem;
+    line-height: 6.5rem;
+}
+.subscription-btn a {
+    display: block;
+    height: 6.5rem;
+    /* position: relative; */
+    font-family: NotoB;
+    color: #fff;
+    border-radius: 6.5rem;
+}
+.subscription-btn p {
+    position: relative;
+    display: inline;
+    text-align: center;
+}
+.subscription-btn i {
+    position: absolute;
+    right: 0rem;
+    top: 1.1rem;
+    text-align: center;
+    font-size: 3.7rem;
+}
+/* ▲　「新規ご入会＆ご利用で！」 */
+
+/* ▼　「特典・サービス」 */
+.main02 {
+    margin-top: 165px;
+    padding-bottom: 20px;
+    background-color: rgb(246, 243, 220);
+}
+.main02::after {  /*上部marginの四角背景*/
+    content: "";
+    position: absolute;
+    top: -200px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-color: rgb(246, 243, 220);
+    z-index: -50;
+}
+.main02::before {  /* 平行四辺形の背景 */
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    transform: skewY(4deg);
+    transform-origin: bottom left;
+    background-color: rgb(246, 243, 220);
+    z-index: -50;
+}
+.benefits-table, .main02-annotation-box {
+    max-width: 950px;
+    margin: 0 auto;
+}
+.benefits-table {
+    margin-top: 50px;
+}
+.benefits-table p {
+    font-size: 2.4rem;
+    line-height: calc(2.4rem + 1.5rem);
+    font-family: NotoB;
+    color: #000;
+}
+.benefits {
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin-bottom: 6px;
+}
+.benefits:nth-of-type(1) .benefits-left {
+    border-radius: 45px 0 0 0;
+}
+.benefits:nth-of-type(1) .benefits-right {
+    border-radius: 0 45px 0 0;
+}
+.benefits:nth-of-type(4) .benefits-left {
+    border-radius: 0 0 0 45px;
+}
+.benefits:nth-of-type(4) .benefits-right {
+    border-radius: 0 0 45px 0;
+}
+.benefits.table04 {
+    margin-bottom: 0;
+}
+.benefits-left, .benefits-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-color: rgb(255, 255, 255);
+}
+.benefits-left {
+    position: relative;
+    width: 281px;
+    margin-right: 3px;
+    text-align: center;
+}
+.benefits-left::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    right: -3px;
+    width: 3px;
+    height: 130px;
+    background-color: rgba(204, 204, 204, 1);
+}
+.benefits-right {
+    width: calc(950px - 281px);
+    text-align: center;
+}
+.benefits-right-flex {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+.font-NotoB-red {
+    font-size: 2.4rem;
+    line-height: calc(2.4rem + 1.5rem);
+    font-family: NotoB;
+    color: rgb(127, 16, 25);
+}
+.font-NotoB-red42px {
+    font-size: 4.2rem;
+    line-height: 4.2rem;
+    font-family: NotoB;
+    color: rgb(127, 16, 25);
+}
+.font-NotoR {
+    font-size: 1.6rem;
+    line-height: 3.0rem;
+    color: #000;
+}
+.font-NotoR-ano {
+    position: relative;
+}
+.font-NotoR-ano div {
+    position: absolute;
+    bottom: -.2rem;
+    left: 1rem;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    color: #000;
+}
+.main02-annotation-box {
+    padding-left: .5rem;
+    padding-right: .8rem;
+    font-size: 1.6rem;
+    color: #000;
+}
+.main02-annotation-box .annotation-list01 {
+    padding-top: 2.8rem;
+}
+.main02-annotation-box .annotation-list02 {
+    margin-top: 2.0rem;
+}
+/* ▲　「特典・サービス」 */
+
+/* ▼　「カード発行までの流れ」 */
+.main03 {
+    position: relative;
+    margin-top: 170px;
+    padding-bottom: 163px;
+    overflow-x: hidden;
+}
+.main03 h3 {
+    padding-bottom: 60px;
+}
+
+/* Swiper */
+.swiper {
+    position: relative;
+    /* wrapperのサイズを調整 */
+    width: 558px;
+    height: 245px;
+    margin: 0 auto;
+}
+.swiper-slide {
+    /* スライドのサイズを調整、中身のテキスト配置調整、背景色 */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: solid 5px rgb(181, 233, 238);
+    box-sizing: border-box;  /*　境界線を要素内に指定しないとスライドの中心が徐々にずれていく為　*/
+    border-radius: 30px;
+    height: 100%;
+    font-size: 3.6rem;
+    line-height: 3.6rem;
+    color: #000;
+    box-shadow: 10px 10px 10px 0 rgba(96, 96, 96, .3);
+}
+.swiper-slide p:nth-child(1) {
+    margin: 4.0rem auto 4.5rem;
+    line-height: 3.7rem;
+    border-bottom: solid 3px rgb(31, 39, 116);
+    font-family: NotoB;
+    color: rgb(31, 39, 116);
+}
+.btn-area {
+    position: relative;
+    padding-top: 34.5px;
+    width: 225px;
+    height: auto;
+    margin: 0 auto;
+}
+.swiper-pagination {
+    font-size: 2.8rem;
+    line-height: 4.5rem;
+    color: #000;
+}
+.swiper-button-next,.swiper-button-prev {
+    /* ボタン領域 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+}
+.swiper-pagination::after, .swiper-pagination::before {
+    content: "";
+    position: absolute;
+    background-color: rgb(246, 243, 220);
+    border-radius: 50%;
+    opacity: 1;
+    bottom: -8px;
+    width: 60px;
+    height: 60px;
+    z-index: 200;
+}
+.swiper-pagination::after {
+    left: -22px;
+}
+.swiper-pagination::before {
+    right: -22px;
+}
+.btn-area i {
+    text-align: center;
+    font-size: 34px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+}
+/* Swiper */
+/* ▲　「カード発行までの流れ」 */
+
+
+/* ▼　「他にも特典・サービスがたくさん」 */
+.main04 {
+    padding-top: 60px;
+    padding-bottom: 100px;
+    background-color: rgb(181, 233, 238);
+}
+.main04::after {  /*上部marginの四角背景*/
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    transform: skewY(4deg);
+    transform-origin: top right;
+    background-color: rgb(181, 233, 238);
+    z-index: -50;
+}
+.accordion-container {
+    max-width: 950px;
+    margin: 0 auto;
+    color: #000;
+}
+.accordion-title {
+    position: relative;
+    width: 100%;
+    min-height: 65px;
+    padding: 15px 100px 15px 50px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    box-shadow: 10px 10px 10px 0 rgba(96, 96, 96, .3);
+    background: linear-gradient(to right, rgb(246,243,217) 0%,rgb(247,241,192) 50%,rgb(231,224,174) 100%);
+    font-size: 2.4rem;
+    cursor: pointer;
+}
+.accordion-title:nth-of-type(1) {
+    margin-top: 50px;
+}
+.circle {
+    position: absolute;
+    bottom: 10px;
+    right: 50px;
+    width: 45px;
+    height: 45px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    font-size: 50px;
+    line-height: 50px;
+}
+.accordion-title::before, .accordion-title::after {
+	content: '';
+	display: block;
+	background-color: #000;
+	position: absolute;
+	bottom: 32px;
+    right: 60px;
+	width: 25px;
+	height: 2px;
+    z-index: 100;
+}
+.accordion-title::after {
+	transform: rotate(90deg);
+	transition-duration: .3s;
+}
+.accordion-title.is-active::before {
+	opacity: 0;
+}
+.accordion-title.is-active::after {
+	transform: rotate(0);
+}
+.accordion-content {
+    width: 100%;
+    padding: 0 50px;
+    background-color: #fff;
+    font-size: 1.6rem;
+    transition: padding .3s ease-out
+}
+.accordion-content.is-open {
+	padding: 24.5px 50px 24.5px 50px; /*padding 上下を指定する*/
+    transition: padding .3s ease-out;
+}
+.accordion-content .A-text {
+    line-height: 0rem;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+    line-height .3s ease-out,
+    opacity     .1s linear .1s,
+    visibility  .1s linear .1s;
+}
+.accordion-content.is-open .A-text {
+    line-height: 2.6rem;
+    opacity: 1;
+    visibility: visible;
+    transition:
+    line-height .3s ease-out,
+    opacity     .1s linear .1s,
+    visibility  .1s linear .1s;
+}
+/* ▲　「他にも特典・サービスがたくさん」 */
+
+
+/* ▼　「基本情報」 */
+.main05 {
+    margin-top: 70px;
+    margin-bottom: 190px;
+}
+.main05 h3 {
+    margin-bottom: 55px;
+}
+.info-box {
+    max-width: 950px;
+    margin: 0 auto;
+}
+.info-box-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+.info-box-content:nth-of-type(1) {
+    border-top: 1px solid #000;
+}
+.info-box-content p {
+    font-size: 1.6rem;
+    color: #000;
+    line-height: 2.8rem;
+}
+.info-left {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    width: 265px;
+    text-align: center;
+    border-right: 1px solid rgb(152,152,152);
+    background-color: rgb(235,228,175);
+}
+.info-right, .info-right-lp {
+    display: block;
+    width: calc(950px - 265px);
+    border-left: 1px solid rgb(152,152,152);
+    padding: 13.5px 37px 13.5px 30px;
+}
+.info-box-content:nth-of-type(1) .info-right, .info-right-lp {
+    padding: 13px 37px 13px 30px;
+}
+.info-right-sp {
+    display: none;
+}
+.info-right-ano p {
+    font-size: 1.4rem;
+}
+.indent2 {  /*インデント2行分*/
+	text-indent: -2em;
+	padding-left: 2em;
+}
+.indent1 {  /*インデント2行分*/
+	text-indent: -1em;
+	padding-left: 1em;
+}
+/* ▲　「基本情報」 */
+.main01.main06 {
+    padding-bottom: 60px;
+}
+
+/* ▼　フッター */
+footer {
+    max-width: 1366px;
+    width: 100%;
+    margin: 170px auto 77px;
+    text-align: center;
+    color: #000;
+    font-size: 1.2rem;
+}
+.footer-title {
+    margin-bottom: 2.5rem;
+    font-size: 6.0rem;
+    line-height: 6.0rem;
+    color: rgb(31, 39, 116);
+}
+/* ▲　フッター */
+
+
+@media screen and (max-width:767px) {
+    /* ▼　ヘッダー */
+    header {
+        height: 60px;
+    }
+    .header-box {
+        position: relative;
+        display: block;
+        padding-left: 15px;
+        padding-right: 15px;
+        z-index: 999;
+    }
+    .header-box h1 {
+        font-size: 25px;
+        line-height: 25px;
+        padding-top: 20px;
+        padding-bottom: 15px;
+    }
+    .global-nav-list {
+        position: fixed;
+        display: block;
+        top: -58px;
+        left: 0;
+        width: 100%;
+        padding: 7.5px 0px 7.5px 23px;
+        background-color: rgb(255, 255, 255);
+        z-index: 900;
+        opacity: 0;
+        transition:   /*メニューのスライドアニメーション*/
+        top .5s ease-out,  
+        opacity .2s ease;
+    }
+    .global-list {
+        display: flex;
+        height: auto;
+        width: auto;
+        text-align: left;
+        border: 0px;
+    }
+    .global-list a {
+        font-size: 1.6rem;
+        line-height: 3.1rem;
+    }
+    #item1 a:hover, #item2 a:hover, #item3 a:hover {
+        color: rgb(152,152,152);
+    }
+    .global-list#item4 {
+        display: none;
+    }
+    .hamburger, .black-bg {
+        display: block;
+    }
+    .hamburger {
+        position: absolute;
+        top: 0;
+        right: 15px;
+        height: 60px;
+        width: 40px;
+        cursor: pointer;
+        z-index: 999;
+    }
+    .hamburger-line {
+        position: absolute;
+        right: 0rem;
+        width: 4.0rem;
+        height: 0.7rem;
+        background-color: rgb(96, 96, 96);
+        transition: all .6s;
+        z-index: 999;
+    }
+    .hamburger-line-1 {
+        top: 1.2rem;
+        border-radius: 0.2rem;
+    }
+    .hamburger-line-2 {
+        top: calc(1.2rem + 1.5rem);
+        border-radius: .2rem;
+    }
+    .hamburger-line-3 {
+        top: calc(1.2rem + 3.0rem);
+        border-radius: .2rem;
+    }
+    .nav-open .global-nav-list {
+        top: 60px;
+        width:100%;
+        opacity: 1;
+        transition:   /*メニューのスライドアニメーション*/
+        top .4s ease-out,  
+        opacity .6s ease;
+    }
+    .nav-open .hamburger-line-1 {
+        transform: rotate(45deg);
+        top: 3.0rem;
+    }
+    .nav-open .hamburger-line-2 {
+        width: 0;
+    }
+    .nav-open .hamburger-line-3 {
+        transform: rotate(-45deg);
+        top: 3.0rem;
+    }
+    /* ▲　ヘッダー */
+
+
+    .main {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    /* ▼　「ネットショッピング時代のスタンダード」画面 */
+    .main-top {
+        margin-bottom: 153px;
+        padding-bottom: 107px;
+    }
+    #main h2 {
+        padding: 69px 0px 51px;
+        font-size: 2.4rem;
+        line-height: 4.2rem;
+        text-align: center;
+    }
+    .credit-card {
+        padding-bottom: 60px;
+    }
+    .enter-btn-sp {
+        display: block;
+        position: relative;
+        width: 166px;
+        margin: 0 auto;
+        background: linear-gradient(to right, rgb(65,74,155) 0%,rgb(48,58,149) 50%,rgb(33,41,119) 100%);
+    }
+    .enter-btn-sp a {
+        font-size: 1.8rem;
+        line-height: 4.5rem;
+        text-align: center;
+        font-family: NotoB;
+        color: #fff;
+    }
+    .enter-btn-sp i {
+        position: absolute;
+        right: 3.4rem;
+        top: 1.4rem;
+        text-align: center;
+        font-size: 2.0rem;
+        font-family: "Font Awesome 5 Free";
+        font-weight: bold;
+    }
+    .credit-card-absolute {
+        padding: 21px 15px;
+    }
+    .credit-card-absolute p {
+        font-size: 2.1rem;
+        line-height: 3.7rem;
+    }
+    /* ▲　「ネットショッピング時代のスタンダード」画面 */
+
+
+    .main h3 {
+        font-size: 2.8rem;
+        line-height: 2.8rem;
+    }
+    /* ▼　「新規ご入会＆ご利用で！」 */
+    .main01 {
+        padding-top: 48px;
+        padding-bottom: 40px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .main01::before {  /* 平行四辺形の背景 */
+        transform: skewY(6deg);
+        transform-origin: top right;
+    }
+    .main01-text-box{
+        margin: 40px auto 0 auto;
+        padding: 0 15px 28px;
+    }
+    .main01-text-box-top {
+        padding: 22px 0 9px 0;
+    }
+    .saidai, .point-text, .present-text {
+        font-size: 2.854rem;
+        line-height: 2.854rem;
+    }
+    .point-number {
+        font-size: 6.586rem;
+        line-height: 6.586rem;
+    }
+    .point-text::after {  /*「※」*/
+        top: -15px;
+        right: -10px;
+        font-size: .878rem;
+    }
+    .campaign-box {
+        justify-content: space-between;
+        margin-top: 17px;
+        margin-bottom: 17px;
+        font-size: 1.2rem;
+        line-height: 20px;
+    }
+    .campaign-text-left {
+        width: 120px;
+    }
+    .campaign-box p:nth-child(1) {
+        width: 35%;
+        text-align: center;
+        display: block;
+        padding-left: 2px;
+        padding-right: 0px;
+        font-size: 1.3rem;
+    }
+    .campaign-box p:nth-child(1)::before {
+        top: 0;
+        max-width: 310px;
+        right: -16px;
+        width: 15px;
+        height: 15px;
+    }
+    .campaign-box p:nth-child(2) {
+        width: 65%;
+        padding-left: 15px;
+        text-align: center;
+    }
+    .annotation-box {
+        font-size: 1.0rem;
+        line-height: 1.2rem;
+    }
+    .annotation {
+        margin-bottom: 18px;
+    }
+    .annotation p:nth-child(1) {
+        margin-right: .4rem;
+    }
+    .main01 .annotation-list01 {
+        margin-top: 15px;
+    }
+    .main01 .annotation-list01 p:nth-child(1), .main01 .annotation-list02 p:nth-child(1) {
+        margin-right: .5rem;
+    }
+    .subscription-btn {
+        max-width: 557px;
+        height: 40px;
+        margin: 40px auto 0 auto;
+        font-size: 2.2rem;
+        line-height: 4.0rem;
+    }
+    .subscription-btn a {
+        height: 40px;
+    }
+    .subscription-btn i {
+        right: 0px;
+        top: 7.2px;
+        text-align: center;
+        font-size: 2.2rem;
+    }
+    /* ▲　「新規ご入会＆ご利用で！」 */
+
+    /* ▼　「特典・サービス」 */
+    .main02 {
+        margin-top: 70px;
+        padding-bottom: 40px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .benefits-table {
+        margin-top: 40px;
+    }
+    .benefits-table p {
+        font-size: 1.4rem;
+        line-height: 1.5rem;
+    }
+    .benefits {
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        margin-bottom: 6px;
+    }
+    .benefits.table04 {
+        margin-bottom: 0;
+    }
+    .benefits-left::after{
+        height: 60px;
+    }
+    .benefits-left p {
+        padding-left: 4px;
+    }
+    .font-NotoB-red {
+        font-size: 1.4rem;
+        line-height: 1.5rem;
+    }
+    .font-NotoB-red42px {
+        font-size: 2.4rem;
+        line-height: 2.4rem;
+    }
+    .font-NotoR {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+    }
+    .font-NotoR-ano div {
+        bottom: -.1rem;
+        left: .2rem;
+        font-size: 1.0em;
+        line-height: 1.0rem;
+    }
+    .font-NotoR-ano .ano-sp {
+        position: absolute;
+        bottom: 1.2rem;
+        left: -1.5rem;
+        font-size: 1.0em;
+        line-height: 1.0rem;
+        color: #000;
+    }
+    .main02-annotation-box {
+        padding-left: 0rem;
+        padding-right: 0;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+    }
+    .main02-annotation-box .annotation-list02 {
+        margin-top: 12px;
+    }
+    .main02-annotation-box .indent2 {
+        text-indent: 0;
+        padding: 0;
+    }
+    .main02-annotation-box .annotation-list01 {
+        padding-top: 25px;
+    }
+    /* ▲　「特典・サービス」 */
+
+
+    /* ▼　「カード発行までの流れ」 */
+    .main03 {
+        margin-top: 65px;
+        padding-bottom: 73px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .main03 h3 {
+        padding-bottom: 40px;
+    }
+    /* Swiper */
+    .swiper {
+        /* wrapperのサイズを調整 */
+        width: 268px;
+        height: 115px;
+    }
+    .swiper-slide {
+        /* スライドのサイズを調整、中身のテキスト配置調整、背景色 */
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .swiper-slide p:nth-child(1) {
+        margin: 15px auto 17px;
+        line-height: 20px;
+    }
+    .btn-area {
+        width: 213px;
+    }
+    .swiper-pagination {
+        font-size: 24px;
+        line-height: 4.5rem;
+    }
+    /* Swiper */
+    /* ▲　「カード発行までの流れ」 */
+
+    /* ▼　「他にも特典・サービスがたくさん」 */
+    .main04 {
+        padding-top: 30px;
+        padding-bottom: 60px;
+    }
+    .main04 h3 {
+        line-height: 48px;
+    }
+    .accordion-container {
+        padding-left: -15px;
+    }
+    .accordion-title {
+        width: 100%;
+        padding: 0px 60px 0px 15px;
+        height: 80px;
+        margin-top: 20px;
+        margin-bottom: 3px;
+        font-size: 18px;
+        line-height: 30px;
+        box-shadow: 3px 3px 3px 0 rgba(96, 96, 96, .3);
+    }
+    .Q-text {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-content: center;
+        height: 80px;
+    }
+    .accordion-title:nth-of-type(1) {
+        margin-top: 30px;
+    }
+    .circle {
+        bottom: 17.5px;
+        right: 15px;
+    }
+    .accordion-title::before, .accordion-title::after {
+        bottom: 40px;
+        right: 25px;
+    }
+    .accordion-content {
+        padding: 0 15px;
+        font-size: 12px;
+    }
+    .accordion-content.is-open {
+        padding: 14.5px 15px 14.5px 15px; /*padding 上下を指定する*/
+    }
+    .accordion-content.is-open .A-text {
+        line-height: 1.9rem;
+    }
+    .accordion-content span {
+        display: none;
+    }
+    /* ▲　「他にも特典・サービスがたくさん」 */
+
+
+    /* ▼　「基本情報」 */
+    .main05 {
+        margin-top: 60px;
+        margin-bottom: 78.5px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .main05 h3 {
+        margin-bottom: 30px;
+    }
+    .info-box-content p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .info-left {
+        width: 36%;
+    }
+    .info-right, .info-right-sp {
+        width: 64%;
+        border-left: 1px solid rgb(152,152,152);
+        padding: 11.5px 10px 11.5px 10px;
+    }
+    .info-box-content:nth-of-type(1) .info-right, .info-right-sp {
+        padding: 11px 11px 11px 10px;
+    }
+    .info-right-lp {
+        display: none;
+    }
+    .info-right-sp {
+        display: block;
+    }
+    .info-right-ano p {
+        font-size: 1.0rem;
+    }
+    .info-box-content:nth-of-type(3) {
+        display: none;
+    }
+    /* ▲　「基本情報」 */
+    .main01.main06 {
+        padding-bottom: 60px;
+    }
+    /* ▼　フッター */
+footer {
+    max-width: 1366px;
+    width: 100%;
+    margin: 72px auto 39px;
+    text-align: center;
+    color: #000;
+    font-size: 10px;
+}
+.footer-title {
+    margin-bottom: 22px;
+    font-size: 35px;
+    line-height: 35px;
+    color: rgb(31, 39, 116);
+}
+/* ▲　フッター */
+
+}
+
+@media screen and (max-width:520px) {
+    .credit-card-absolute p br{
+        display: block;
+    }
+    .main-top h2 br, .main h3 br, .accordion-container br {
+        display: block;
+    }
+}
