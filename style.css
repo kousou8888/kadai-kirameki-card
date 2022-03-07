@@ -63,8 +63,9 @@ header {
     padding: 0 110px;
 }
 .header-box h1 {
-    font-size: 4.5rem;
+    font-size: 5.0rem;
     line-height: 80px;
+    letter-spacing: .2rem;
 }
 .global-nav-list {
     display: flex;
@@ -227,7 +228,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding: 22px 0 18px 0;
+    padding: 27px 0 13px 0;
     width: 100%;
     margin: 0 auto;
 }
@@ -315,7 +316,7 @@ header {
     margin-right: 1.1rem;
 }
 .annotation p:nth-child(2), .annotation-list01 p:nth-child(2), .annotation-list02 p:nth-child(2) {
-    margin-right: 1.5rem;
+    margin-right: 1.0rem;
 }
 .annotation-list01, .annotation-list02 {
     display: flex;
@@ -323,7 +324,7 @@ header {
 .main01 .annotation-list01 {
     margin-top: 30px;
 }
-.annotation-list01 p:nth-child(1), .annotation-list02 p:nth-child(1) {
+.main01 .annotation-list01 p:nth-child(1), .main01 .annotation-list02 p:nth-child(1) {
     margin-right: 1.2rem;
 }
 .subscription-btn {
@@ -484,9 +485,10 @@ header {
     color: #000;
 }
 .main02-annotation-box {
-    padding-left: .5rem;
-    padding-right: .8rem;
-    font-size: 1.6rem;
+    padding-left: .6rem;
+    padding-right: .9rem;
+    font-size: 1.61rem;
+    line-height: 1.9rem;
     color: #000;
 }
 .main02-annotation-box .annotation-list01 {
@@ -664,7 +666,7 @@ header {
     transition: padding .3s ease-out
 }
 .accordion-content.is-open {
-	padding: 24.5px 50px 24.5px 50px; /*padding 上下を指定する*/
+	padding: 24.5px 75px 24.5px 50px; /*padding 上下を指定する*/
     transition: padding .3s ease-out;
 }
 .accordion-content .A-text {
@@ -691,7 +693,7 @@ header {
 /* ▼　「基本情報」 */
 .main05 {
     margin-top: 70px;
-    margin-bottom: 190px;
+    margin-bottom: 150px;
 }
 .main05 h3 {
     margin-bottom: 55px;
@@ -730,16 +732,19 @@ header {
     display: block;
     width: calc(950px - 265px);
     border-left: 1px solid rgb(152,152,152);
-    padding: 13.5px 37px 13.5px 30px;
+    padding: 13px 37px 13px 30px;
 }
 .info-box-content:nth-of-type(1) .info-right, .info-right-lp {
-    padding: 13px 37px 13px 30px;
+    padding: 12.5px 37px 12.5px 30px;
 }
 .info-right-sp {
     display: none;
 }
 .info-right-ano p {
     font-size: 1.4rem;
+}
+.info-box-content .space {
+    line-height: 1.35rem;
 }
 .indent2 {  /*インデント2行分*/
 	text-indent: -2em;
@@ -765,7 +770,7 @@ footer {
 }
 .footer-title {
     margin-bottom: 2.5rem;
-    font-size: 6.0rem;
+    font-size: 6.5rem;
     line-height: 6.0rem;
     color: rgb(31, 39, 116);
 }
@@ -838,9 +843,9 @@ header {
         z-index: 999;
     }
     .header-box h1 {
-        font-size: 25px;
-        line-height: 25px;
-        padding-top: 20px;
+        font-size: 28px;
+        line-height: 28px;
+        padding-top: 17px;
         padding-bottom: 15px;
     }
     .global-nav-list {
@@ -952,7 +957,7 @@ header {
         position: relative;
         width: 166px;
         margin: 0 auto;
-        background: linear-gradient(to right, rgb(65,74,155) 0%,rgb(48,58,149) 50%,rgb(33,41,119) 100%);
+        background-color: rgb(31,39,116);
     }
     .enter-btn-sp a {
         font-size: 1.8rem;
