@@ -65,7 +65,6 @@ header {
 .header-box h1 {
     font-size: 5.0rem;
     line-height: 80px;
-    letter-spacing: .2rem;
 }
 .global-nav-list {
     display: flex;
@@ -780,7 +779,7 @@ footer {
 /* ▲　フッター */
 
 
-@media screen and (max-width:1285px) {
+@media screen and (max-width:1335px) {
     header {
         height: 70px;
     }
@@ -788,7 +787,7 @@ footer {
         padding: 0 40px;
     } 
 }
-@media screen and (max-width:1145px) {
+@media screen and (max-width:1200px) {
     /* ▼　ヘッダー */
 header {
     height: 70px;
