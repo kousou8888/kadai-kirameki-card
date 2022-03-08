@@ -579,7 +579,7 @@ header {
 }
 .btn-area i {
     text-align: center;
-    font-size: 34px;
+    font-size: 39px;
     font-family: "Font Awesome 5 Free";
     font-weight: bold;
 }
@@ -1192,6 +1192,9 @@ header {
     .swiper-pagination {
         font-size: 24px;
         line-height: 4.5rem;
+    }
+    .btn-area i {
+        font-size: 40px;
     }
     /* Swiper */
     /* ▲　「カード発行までの流れ」 */
